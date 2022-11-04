@@ -11,12 +11,16 @@
             align-content: center;
 
         }
+        input, select, textarea{
+            border-radius: 0.5rem;
+            border: 1px solid lightpink;
+            margin-bottom: 2px;
+        }
         .sign{
             margin: 20px;
             padding: 10px;
             max-width: 500px;
-            align-items: center;
-
+            text-align: center;
         }
         legend{
             text-align: center;
@@ -120,7 +124,7 @@
     </fieldset>
     <fieldset class ="cen" style="width: 400px; margin:5px">
         <legend>건의사항</legend>
-        <textarea name="message" rows="10" cols="50" placeholder="하고싶은 말을 적어보세요."></textarea>
+        <textarea name="message" rows="10" style="width: 85%" placeholder="하고싶은 말을 적어보세요."></textarea>
     </fieldset>
     <div class="cen" >
         <input type="submit"class="submit" value="Submit">
