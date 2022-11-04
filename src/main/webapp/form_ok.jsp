@@ -13,11 +13,12 @@
   String password = request.getParameter("password");
   String fname = request.getParameter("fname");
   String lname = request.getParameter("lname");
+  String nickname = request.getParameter("nickname");
   String gender = request.getParameter("gender");
   String number = request.getParameter("number");
-  String job = request.getParameter("job");
+  String jobs = request.getParameter("jobs");
   String birthday = request.getParameter("birthday");
-  String load = request.getParameter("load");
+  String address = request.getParameter("address");
   String message = request.getParameter("message");
 %>
 
@@ -71,15 +72,16 @@
   </div>
 
   <fieldset style="width: 500px;margin:5px">
-    <legend><?= $fname ?><?= $lname ?> Information</legend>
-    <div>이메일: <?= $email ?></div>
-    <div>이름: <?= $fname ?><?= $lname ?></div>
-    <div>성별: <?= $gender ?></div>
-    <div>생년월일: <?= $birthday ?></div>
-    <div>핸드폰번호: <?= $number ?></div>
-    <div>직업: <?= $job ?></div>
-    <div>가입경로: <?= $load[0] ?> <?= $load[1] ?> <?= $load[2] ?></div>
-    <div>하고싶은 말: <?= $message ?></div>
+    <legend><%=fname%><%=lname%> Information</legend>
+    <div>이메일: <%=email%></div>
+    <div>이름: <%=fname%><%=lname%></div>
+    <div>닉네임: <%=nickname%></div>
+    <div>성별: <%=gender%></div>
+    <div>생년월일: <%=birthday%></div>
+    <div>핸드폰번호: <%=number%></div>
+    <div>직업: <%=jobs%></div>
+    <div>주소: <%=address%></div>
+    <div>하고싶은 말: <%=message%></div>
   </fieldset>
 </div>
 </body>
