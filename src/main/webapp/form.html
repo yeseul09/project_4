@@ -2,9 +2,129 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Form (22001009, Yeseul Kim)</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            align-items: center;
+            display: flex;
+            align-content: center;
+
+        }
+        .sign{
+            margin: 20px;
+            padding: 10px;
+            max-width: 500px;
+            align-items: center;
+
+        }
+        legend{
+            text-align: center;
+            color: #002F63;
+        }
+        fieldset{
+            border-radius: 0.5rem;
+            border:  2px solid lightpink;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            background-color: lightpink;
+            border-radius: 0.5rem;
+            margin-bottom: 0;
+        }
+        p{
+            margin: 0;
+            text-align: right;
+            color: lightpink;
+
+        }
+        .cen{
+            text-align: center;
+        }
+        .submit{
+
+            margin-top: 10px;
+            background-color: lightpink;
+            color: white;
+            height: 30px;
+            width: 50%;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            border: 1px solid lightpink;
+            font-size: 1rem;
+        }
+        .submit:hover{
+            background-color: white;
+            color: lightpink;
+        }
+    </style>
 </head>
 <body>
-
+<form class="sign" action="form_ok.jsp" method="post">
+    <div>
+        <h1>Sign Up Page</h1>
+        <p>22001009 김예슬</p>
+    </div>
+    <fieldset style="width: 400px;margin:5px">
+        <legend>Email/Password</legend>
+        <label for ="email">Email: </label>
+        <input type="email" id="email" name="email"><br>
+        <label for ="pw">Password: </label>
+        <input type="password" id="pw" name="pw"><br>
+    </fieldset>
+    <fieldset style="width:400px;margin:5px">
+        <legend>Name</legend>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br>
+    </fieldset>
+    <fieldset style="width:400px;margin:5px">
+        <legend>Gender</legend>
+        <input type="radio" id="Male" name="gender" value="Male">
+        <label for="Male">Male</label>
+        <input type="radio" id="Female" name="gender" value="Female">
+        <label for="Female">Female</label>
+        <input type="radio" id="None" name="gender" value="None">
+        <label for="None">None</label>
+    </fieldset>
+    <fieldset style="width:400px; margin:5px">
+        <legend>Phone Number</legend>
+        <label for="number">Phone Number:</label>
+        <input type="text" id="number" name="number"><br>
+    </fieldset>
+    <fieldset style='width: 400px; margin:5px'>
+        <legend>Job select</legend>
+        <label for="jobs">Select to job</label>
+        <select id="jobs" name="jobs">
+            <option value="none">no select</option>
+            <option value="student">student</option>
+            <option value="professor">professor</option>
+            <option value="developer">developer</option>
+        </select>
+    </fieldset>
+    <fieldset style="width: 400px;margin:5px">
+        <legend>Birthday</legend>
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday"><br>
+    </fieldset>
+    <fieldset style="width: 400px;margin:5px">
+        <legend>유입 경로</legend>
+        <input type="checkbox" id="SNS" name="load[]" value="SNS">
+        <label for="SNS">sns</label>
+        <input type="checkbox" id="AD" name="load[]" value="AD">
+        <label for="AD">ad</label>
+        <input type="checkbox" id="message" name="load[]" value="message">
+        <label for="message">message</label>
+    </fieldset>
+    <fieldset class ="cen" style="width: 400px; margin:5px">
+        <legend>건의사항</legend>
+        <textarea name="message" rows="10" cols="50" placeholder="하고싶은 말을 적어보세요."></textarea>
+    </fieldset>
+    <div class="cen" >
+        <input type="submit"class="submit" value="Submit">
+    </div>
+</form>
 </body>
 </html>
